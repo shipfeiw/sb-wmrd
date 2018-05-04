@@ -1,0 +1,33 @@
+server:
+  port: 8081
+logging:
+  level: warn
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 1
+    pool:
+      max-active: 8
+      max-idle: 8
+      max-wait: -1
+      min-idle: 0
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+mybatis:
+  type-handlers-package: com.spf.mapper
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+
+
+

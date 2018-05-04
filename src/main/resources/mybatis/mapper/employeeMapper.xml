@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.spf.mapper.EmployeeMapper">
+    <select id="getAllEmployees" resultType="com.spf.dto.EmployeeDto">
+      select a.id, a.name, a.age, a.description from employee a
+    </select>
+
+    <select id="getSingleEmployee" resultType="com.spf.dto.EmployeeDto" parameterType="int">
+        select a.id, a.name, a.age, a.description from employee a where a.id=#{id}
+    </select>
+</mapper>
