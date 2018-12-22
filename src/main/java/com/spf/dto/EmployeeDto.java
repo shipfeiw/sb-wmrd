@@ -1,12 +1,17 @@
 package com.spf.dto;
 
+import java.io.Serializable;
+
 /**
  * Created by shipengfei.
  * Date: 18/5/3
  * Time: 上午11:33
  * Motto: Saying and doing are two different things.
  */
-public class EmployeeDto {
+public class EmployeeDto implements Serializable {
+
+    private static final long serialUID = 5L;
+
     private int id;
     private String name;
     private int age;
@@ -53,5 +58,35 @@ public class EmployeeDto {
                 '}';
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

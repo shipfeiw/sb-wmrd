@@ -2,6 +2,7 @@ package com.spf.mapper;
 
 import com.spf.dto.EmployeeDto;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
@@ -11,11 +12,12 @@ import java.util.List;
  * Time: 上午9:36
  * Motto: Saying and doing are two different things.
  */
+@Repository
 @Mapper
 public interface EmployeeMapper {
 
     List<EmployeeDto> getAllEmployees();
 
-    EmployeeDto getSingleEmployee(int id);
+    EmployeeDto getSingleEmployee(String id);
 
 }
